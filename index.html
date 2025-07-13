@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600494603989-9650e6e5f0f1?ixlib=rb-4.0.3&ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('./public/hero1.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<!-- jen -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTM Batan Indah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- end jen -->
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-blue-400 flex items-center justify-center mr-3">
+              <i class="fa-brands fa-soundcloud text-white text-xl"></i>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold text-gray-800">PTM Batan Indah - "Smash bareng, ngopi bareng, ketawa bareng!"
+              </h1>
+              <p class="text-xs text-gray-500">Tangerang Selatan</p>
+            </div>
+          </div>
+
+          <!-- Menu Desktop -->
+          <nav class="hidden md:flex space-x-8">
+            <a href="#home" class="text-gray-800 hover:text-blue-500 font-medium transition">Beranda</a>
+            <a href="#profile" class="text-gray-800 hover:text-blue-500 font-medium transition">Tentang Kami</a>
+            <a href="#project" class="text-gray-800 hover:text-blue-500 font-medium transition">Project Tempat Baru</a>
+            <a href="#contact" class="text-gray-800 hover:text-blue-500 font-medium transition">Kontak</a>
+          </nav>
+
+          <!-- Hamburger Menu (Mobile) -->
+          <button id="menu-toggle" class="md:hidden text-gray-800">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-2">
+          <a href="#home" class="block py-2 px-4 text-gray-800 hover:text-blue-500 font-medium">Beranda</a>
+          <a href="#profile" class="block py-2 px-4 text-gray-800 hover:text-blue-500 font-medium">Tentang Kami</a>
+          <a href="#project" class="block py-2 px-4 text-gray-800 hover:text-blue-500 font-medium">Project Tempat
+            Baru</a>
+          <a href="#contact" class="block py-2 px-4 text-gray-800 hover:text-blue-500 font-medium">Kontak</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- jen -->
+    <!-- Script untuk toggle menu dan auto-hide saat diklik -->
+    <script>
+      const toggleBtn = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Tutup menu setelah klik salah satu link (untuk mobile)
+      const menuLinks = mobileMenu.querySelectorAll('a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    </script>
+    <!-- end jen -->
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-[60vh] flex items-center text-white">
+      <div class="container mx-auto px-4 py-20">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Wellcome to</h1>
+          <!-- <h1 class="text-4xl md:text-5xl font-bold mb-4">GBass Audio Specialist</h1> -->
+          <h1 class="text-4xl md:text-6xl font-extrabold text-blue-600 mb-4">
+            PTM Batan Indah
+          </h1>
+          <p class="text-lg md:text-xl mb-6">Tenis meja, bukanlah sekadar olahraga biasa. Bagi sebagian orang, tenis
+            meja bukan hanya tentang pukulan bola ke sisi meja, melainkan juga merupakan kecintaan dan hobi yang
+            mendalam. Banyak orang yang menikmati kegembiraan dan tantangan yang ditawarkan oleh permainan ini</p>
+
+          <p class="text-lg md:text-xl mb-6">~ Spin ~ Chop ~ Ngopi ~ Repeat ~</p>
+
+          <!-- <p class="text-lg md:text-xl mb-6"></p>“Gondrong Itu Seni, Audio Itu Harmoni...”</p> -->
+
+          <!-- <div class="flex flex-wrap gap-4">
+                        <a href="#contact"
+                            class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-medium transition">Daftar
+                            Sekarang</a>
+                        <a href="#program"
+                            class="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg text-white font-medium transition">Lihat
+                            Program</a>
+                    </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Profile</h2>
+          <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="md:w-1/2">
+            <img src="./public/hero2.png" alt="thenest" class="rounded-lg shadow-lg w-full h-auto">
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">PTM Batan Indah</h3>
+            <p class="text-gray-600 mb-4">PTM Batan Indah (Persatuan Tenis Meja Batan Indah) adalah komunitas olahraga
+              yang dibentuk oleh warga Batan Indah dengan semangat kebersamaan, sportivitas, dan gaya hidup sehat. Kami
+              hadir sebagai wadah bagi warga dan para pecinta Olah raga Tenis Meja yang ingin berolahraga,
+              bersilaturahmi, dan berkembang dalam bidang tenis meja.</p>
+            <p class="text-gray-600 mb-4">""Yang penting keringat, bukan ranking!""</p>
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="project" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Project Pembuatan Tempat Baru</h2>
+          <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+
+          <!-- Program 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">Project Pembuatan Tempat Baru</h3>
+
+              <p>1. Pembentukan Panitia (✅ Done)</p>
+              <li>Mengatur seluruh proses perencanaan, pembangunan, dan pelaporan</li>
+              <li>Panitia inti: Ketua, Sekretaris, Bendahara, Koordinator Lapangan, Koordinator Dana.</li>
+              <li>Grup komunikasi (WhatsApp)</li>
+
+              <br>
+              <p>2. Survey & Studi Kelayakan (✅ Done)</p>
+              <li>Menentukan lokasi dan kebutuhan pembangunan</li>
+              <li>Survey lokasi yang memungkinkan di area Batan Indah</li>
+              <li>Konsultasi dengan RT/RW atau pengurus wilayah setempat</li>
+              <li>Buat sketsa kasar desain tempat/lapangan</li>
+              </p>
+
+              <br>
+              <p>3. Rencana Anggaran Biaya (RAB) (🔄 On Progress)</p>
+              <li>Menyusun rincian biaya pembangunan</li>
+              <li>Biaya pembangunan (lantai semen/vinyl, pencahayaan, dll)</li>
+              <li>Biaya Operasional</li>
+              </p>
+
+              <br>
+              <p>4. Penggalangan Dana dari Anggota (🔄 On Progres)</p>
+              <li>Mencapai target biaya pembangunan</li>
+              <li>Sosialisasi ke anggota PTM via grup</li>
+              <li>Sistem: iuran tetap, donasi sukarela, atau gabungan</li>
+              <li>Sponsorship</li>
+              </p>
+
+              <br>
+              <p>5. Perizinan & Koordinasi Lingkungan (✅ Done)</p>
+              </p>
+
+              <br>
+              <p>6. Pembangunan Fisik </p>
+              <li>Kontrak tukang/kontraktor untuk pembangunan</li>
+              <li>Progres pembangunan</li>
+              </p>
+              
+              <br>
+              <p>7. Laporan Keuangan & Evaluasi</p>
+              <li>membuat laporan dana masuk dan keluar</li>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- //==== -->
+        <!-- <div class="container mx-auto px-4"></div> -->
+        <div class="text-left mt-12 mb-12">
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Progress Pembuatan Tempat Baru</h3>
+          <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+            <div class="h-68 bg-gray-200 flex items-center justify-center">
+              <img src="./public/images/p_bi1.jpeg" alt="1" class="h-full w-full object-cover">
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+            <div class="h-68 bg-gray-200 flex items-center justify-center">
+              <img src="./public/images/p_b2.jpeg" alt="2" class="h-full w-full object-cover">
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+          <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-1/2">
+            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">Informasi Kontak</h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-map-marker-alt text-blue-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Alamat</h4>
+                    <p class="text-gray-600">Komplek Batan Indah, Tangerang Selatan</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-phone-alt text-blue-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Telepon</h4>
+                    <p class="text-gray-600">(021) 123-456-789</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-envelope text-blue-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Email</h4>
+                    <p class="text-gray-600">ptm.batan.indah@gmail.com</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-clock text-blue-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Jam Operasional</h4>
+                    <p class="text-gray-600">Senin-Minggu: Janjian aja</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-6 md:mb-0">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3">
+                <i class="fa-brands fa-soundcloud text-white text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold">PTM Batan Indah</h3>
+            </div>
+            <p class="text-gray-400 max-w-xs">“"Smash bareng, ngopi bareng, ketawa bareng!"”</p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
+              <ul class="space-y-2">
+                <li><a href="#home" class="text-gray-400 hover:text-blue-400 transition">Beranda</a>
+                </li>
+                <li><a href="#profile" class="text-gray-400 hover:text-blue-400 transition">Profil</a>
+                </li>
+                <li><a href="#project" class="text-gray-400 hover:text-blue-400 transition">Pembuatan Tempat Baru</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- <div>
+                            <h4 class="text-lg font-semibold mb-4">Informasi</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Syarat
+                                        Pendaftaran</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Biaya
+                                        Pendidikan</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Kalender
+                                        Akademik</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Berita Terbaru</a>
+                                </li>
+                            </ul>
+                        </div> -->
+
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Sosial Media</h4>
+              <div class="flex space-x-4">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-blue-500 transition">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-blue-500 transition">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-blue-500 transition">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+          <p>&copy; 2025 PTM BI Project</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Theme switcher
+      const themeToggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+
+</html>
